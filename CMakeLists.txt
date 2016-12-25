@@ -1,4 +1,4 @@
-project(threads)
+project(androidport)
 
 cmake_minimum_required(VERSION 2.8)
 set_property(GLOBAL PROPERTY TARGET_SUPPORTS_SHARED_LIBS TRUE)
@@ -26,28 +26,28 @@ set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2")
 add_definitions(-DHAVE_PTHREADS -DFAKE_LOG_DEVICE -DHAVE_SYS_UIO_H)
 add_definitions(-DANDROID_SMP)
 
-#set(LOGWRAP_SRCS logwrap.c)
-#set(LOGWRAPPER_srcs logwrapper.c)
+set(LOGWRAP_SRCS logwrap.c)
+set(LOGWRAPPER_srcs logwrapper.c)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-#add_library(logwrap
-#    SHARED
-#    ${LOGWRAP_SRCS}
-#    )
+add_library(logwrap
+    SHARED
+    ${LOGWRAP_SRCS}
+    )
 
-#set_target_properties(logwrap PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(logwrap PROPERTIES LINKER_LANGUAGE CXX)
 
-#target_link_libraries(logwrap
-#    pthread
-#    cutils
-#    utils
-#    log
-#    )
+target_link_libraries(logwrap
+    pthread
+    cutils
+    utils
+    log
+    )
 
 add_subdirectory(libcutils)
 add_subdirectory(safe-iop)
 add_subdirectory(libutils)
 add_subdirectory(liblog)
-#add_subdirectory(googletest)
+add_subdirectory(googletest)
 add_subdirectory(tests)
