@@ -21,7 +21,7 @@ set(INSTALL_INC_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "Installing dir
 set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
 set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
 
-add_definitions(-DFAKE_LOG_DEVICE -DHAVE_SYS_UIO_H)
+add_definitions(-DHAVE_PTHREADS -DFAKE_LOG_DEVICE -DHAVE_SYS_UIO_H)
 
 #set(LOGWRAP_SRCS logwrap.c)
 #set(LOGWRAPPER_srcs logwrapper.c)
