@@ -43,5 +43,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 #    )
 
 add_subdirectory(libcutils)
+add_subdirectory(safe-iop)
 add_subdirectory(libutils)
 add_subdirectory(liblog)
+#add_subdirectory(googletest)
+#add_subdirectory(tests)
