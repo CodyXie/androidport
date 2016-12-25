@@ -11,3 +11,5 @@ add_library(cutils
     STATIC
     ${LIBCUTILS_SRCS}
     )
+
+target_link_libraries(cutils log)

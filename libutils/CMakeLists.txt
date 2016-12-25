@@ -11,3 +11,5 @@ add_library(utils
     STATIC
     ${LIBUTILS_SRCS}
     )
+
+target_link_libraries(utils log cutils safe-iop)
