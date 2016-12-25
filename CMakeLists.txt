@@ -18,10 +18,10 @@ set(INSTALL_INC_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "Installing dir
 
 #set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4 -fstack-protector-strong -D_FORTIFY_SOURCE=2")
 #set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -mcpu=cortex-a7 -mfloat-abi=hard -mfpu=neon-vfpv4 -fstack-protector-strong -D_FORTIFY_SOURCE=2")
-#set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
-#set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
-set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2")
-set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2")
+set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
+set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2 -fvisibility=hidden")
+#set(CMAKE_C_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2")
+#set(CMAKE_CXX_FLAGS "-fPIC -DNDEBUG -O2 -D_FORTIFY_SOURCE=2")
 
 add_definitions(-DHAVE_PTHREADS -DFAKE_LOG_DEVICE -DHAVE_SYS_UIO_H)
 add_definitions(-DANDROID_SMP)
